@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Langhub | منصة اللغة</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Langhub Logo">
+                    <span>Langhub</span>
+                    <span class="logo-sub">| منصة اللغة</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="#features" class="nav-link">الميزات</a></li>
+                    <li><a href="#levels" class="nav-link">المستويات</a></li>
+                    <li><a href="#gallery" class="nav-link">معرض الصور</a></li>
+                    <li><a href="#stats" class="nav-link">إحصائيات</a></li>
+                    <li><a href="#download" class="nav-link">تحميل</a></li>
+                    <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- الرئيسية -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">تعلم الإنجليزية بـ<span class="highlight">تسلسل ذكي</span></h1>
+                    <p class="hero-description">Langhub منصة متكاملة تأخذك من المستوى التأسيسي (A1) إلى الاحتراف (C2).</p>
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary"><i class="fas fa-download"></i> حمل التطبيق الآن</a>
+                        <a href="#features" class="btn btn-outline"><i class="fas fa-play"></i> اكتشف المزيد</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat"><div class="stat-number" data-target="240">0</div><div class="stat-label">درس تفاعلي</div></div>
+                        <div class="stat"><div class="stat-number" data-target="1800">0</div><div class="stat-label">سؤال تدريبي</div></div>
+                        <div class="stat"><div class="stat-number" data-target="6">0</div><div class="stat-label">مستويات متقدمة</div></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-image.png" alt="Langhub App" class="hero-main-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الميزات -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header"><h2>لماذا تختار <span class="highlight">Langhub</span>؟</h2><p>منصة مصممة خصيصاً ليجعل التعلم ممتعاً</p></div>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div><h3>تسلسل ذكي</h3><p>دروس مرتبة حسب المستوى</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-check-circle"></i></div><h3>شرح ثم اختبار</h3><p>كل درس يبدأ بشرح وافٍ</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>تتبع التقدم</h3><p>راقب تقدمك بدقة</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-mobile-alt"></i></div><h3>تجربة ممتازة</h3><p>واجهة سهلة وبسيطة</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-infinity"></i></div><h3>دروس غير محدودة</h3><p>أكثر من 200 درس</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-sync-alt"></i></div><h3>تحديثات مستمرة</h3><p>محتوى جديد باستمرار</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المستويات -->
+    <section id="levels" class="levels">
+        <div class="container">
+            <div class="section-header"><h2>المستويات <span class="highlight">التعليمية</span></h2><p>6 مستويات للمبتدئين حتى الاحتراف</p></div>
+            <div class="levels-container">
+                <div class="level-card" onclick="document.getElementById('download').scrollIntoView({behavior: 'smooth'});"><div class="level-icon"><i class="fas fa-star"></i></div><h3>A1 - التأسيسي</h3><div class="level-progress"><div class="level-lessons-count">40 درساً</div></div></div>
+                <div class="level-card" onclick="document.getElementById('download').scrollIntoView({behavior: 'smooth'});"><div class="level-icon"><i class="fas fa-book"></i></div><h3>A2 - الأساسي</h3><div class="level-progress"><div class="level-lessons-count">40 درساً</div></div></div>
+                <div class="level-card" onclick="document.getElementById('download').scrollIntoView({behavior: 'smooth'});"><div class="level-icon"><i class="fas fa-rocket"></i></div><h3>B1 - المتوسط</h3><div class="level-progress"><div class="level-lessons-count">40 درساً</div></div></div>
+                <div class="level-card" onclick="document.getElementById('download').scrollIntoView({behavior: 'smooth'});"><div class="level-icon"><i class="fas fa-bolt"></i></div><h3>B2 - فوق المتوسط</h3><div class="level-progress"><div class="level-lessons-count">40 درساً</div></div></div>
+                <div class="level-card" onclick="document.getElementById('download').scrollIntoView({behavior: 'smooth'});"><div class="level-icon"><i class="fas fa-chart-line"></i></div><h3>C1 - المتقدم</h3><div class="level-progress"><div class="level-lessons-count">40 درساً</div></div></div>
+                <div class="level-card" onclick="document.getElementById('download').scrollIntoView({behavior: 'smooth'});"><div class="level-icon"><i class="fas fa-crown"></i></div><h3>C2 - الاحتراف</h3><div class="level-progress"><div class="level-lessons-count">40 درساً</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معرض الصور (أفقي - 4 صور فقط) -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header"><h2>صور من <span class="highlight">التطبيق</span></h2><p>تعرف على واجهة التطبيق وتجربة المستخدم</p></div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/app-screenshots/screen1.jpg" alt="شاشة التعلم"></div>
+                <div class="gallery-item"><img src="images/app-screenshots/screen2.jpg" alt="شاشة الاختبارات"></div>
+                <div class="gallery-item"><img src="images/app-screenshots/screen3.jpg" alt="شاشة شرح الدروس"></div>
+                <div class="gallery-item"><img src="images/app-screenshots/screen4.jpg" alt="شاشة التقدم"></div>
+                <div class="gallery-item"><img src="images/app-screenshots/screen5.jpg" alt="شاشة المحتوى الإضافي"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الإحصائيات -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-wrapper">
+                <div class="stats-card"><div class="stats-icon"><i class="fas fa-users"></i></div><div class="stats-number" data-target="10000">0</div><div class="stats-text">مستخدم نشط</div></div>
+                <div class="stats-card"><div class="stats-icon"><i class="fas fa-book-open"></i></div><div class="stats-number" data-target="240">0</div><div class="stats-text">درس تعليمي</div></div>
+                <div class="stats-card"><div class="stats-icon"><i class="fas fa-question-circle"></i></div><div class="stats-number" data-target="1800">0</div><div class="stats-text">سؤال تدريبي</div></div>
+                <div class="stats-card"><div class="stats-icon"><i class="fas fa-star"></i></div><div class="stats-number" data-target="4.9">0</div><div class="stats-text">تقييم المستخدمين</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التحميل -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2>حمل تطبيق <span class="highlight">Langhub</span> الآن</h2>
+                <p>ابدأ رحلة تعلم الإنجليزية اليوم</p>
+                <div class="download-app-screenshot"><img src="images/app-screenshot.png" alt="شاشة تطبيق Langhub"></div>
+                <div class="download-buttons">
+                    <a href="https://play.google.com" target="_blank" class="download-btn google-play"><i class="fab fa-google-play"></i><div class="btn-text"><span>GET IT ON</span><strong>Google Play</strong></div></a>
+                    <a href="#" class="download-btn app-store" onclick="showIOSPopup(event);"><i class="fab fa-apple"></i><div class="btn-text"><span>Download on the</span><strong>App Store</strong></div></a>
+                    <a href="files/langhub.apk" download class="download-btn direct"><i class="fas fa-download"></i><div class="btn-text"><span>تحميل مباشر</span><strong>APK File</strong></div></a>
+                </div>
+                <div class="qr-code">
+    <div class="qr-placeholder" style="background: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
+        <img src="images/qrcode.png" alt="QR Code" style="width: 100px; height: 100px;">
+        <span style="color: #333; font-size: 12px;">امسح للتحميل</span>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- اتصل بنا -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header"><h2>تواصل <span class="highlight">معنا</span></h2><p>نحن هنا للإجابة على استفساراتك</p></div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-card"><i class="fab fa-facebook-f"></i><h3>فيسبوك</h3><p>LanghubPlatform</p></div>
+                    <div class="info-card"><i class="fab fa-instagram"></i><h3>انستغرام</h3><p>@langhub</p></div>
+                    <div class="info-card"><i class="fab fa-linkedin-in"></i><h3>لينكد إن</h3><p>company/langhub</p></div>
+                    <div class="info-card"><i class="fas fa-envelope"></i><h3>البريد الإلكتروني</h3><p>support@langhub.com</p></div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group"><input type="text" placeholder="الاسم الكامل" required></div>
+                        <div class="form-group"><input type="email" placeholder="البريد الإلكتروني" required></div>
+                        <div class="form-group"><input type="text" placeholder="الموضوع"></div>
+                        <div class="form-group"><textarea rows="5" placeholder="رسالتك..." required></textarea></div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><div class="footer-logo"><img src="images/logo.png" alt="Langhub Logo"><span>Langhub</span></div><p>منصتك المثالية لتعلم الإنجليزية.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div>
+                <div class="footer-section"><h3>روابط سريعة</h3><ul><li><a href="#home">الرئيسية</a></li><li><a href="#features">الميزات</a></li><li><a href="#levels">المستويات</a></li><li><a href="#gallery">معرض الصور</a></li></ul></div>
+                <div class="footer-section"><h3>المستويات</h3><ul><li>A1 - التأسيسي</li><li>A2 - الأساسي</li><li>B1 - المتوسط</li><li>B2 - فوق المتوسط</li></ul></div>
+                <div class="footer-section"><h3>النشرة البريدية</h3><div class="newsletter"><input type="email" placeholder="بريدك الإلكتروني"><button><i class="fas fa-paper-plane"></i></button></div></div>
+            </div>
+            <div class="footer-bottom"><p dir="rtl">&copy; 2026 Langhub | منصة اللغة. جميع الحقوق محفوظة</p></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    
+<!-- Popup مخصص لرسالة iOS -->
+<div id="iosPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
+    <div style="background: var(--bg-card-dark); max-width: 380px; width: 90%; border-radius: 28px; padding: 35px 25px; text-align: center; direction: rtl; position: relative; animation: fadeInUp 0.3s ease; border: 1px solid var(--border-dark); box-shadow: 0 25px 50px rgba(0,0,0,0.3);">
+        
+        <!-- أيقونة Apple -->
+        <div style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; ">
+            <i class="fab fa-apple" style="font-size: 48px; color: white;"></i>
+        </div>
+        
+        <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 24px; font-weight: 700;">قريباً على App Store</h3>
+        
+        <p style="color: var(--text-gray-dark); line-height: 1.8; margin-bottom: 10px; font-size: 16px;">
+            نحن نعمل بجد لتوفير نسخة لأجهزة iOS
+        </p>
+        <p style="color: var(--primary); line-height: 1.7; margin-bottom: 30px; font-size: 16px; font-weight: 500;">
+            <i class="fas fa-code-branch" style="margin-left: 8px;"></i> 
+            قيد التطوير حالياً
+            <i class="fas fa-microchip" style="margin-right: 8px;"></i>
+        </p>
+        
+       <button onclick="closeIOSPopup()" style="background: var(--primary); color: #0f172a; border: none; padding: 14px 35px; border-radius: 50px; font-weight: 700; cursor: pointer; transition: all 0.3s; font-family: inherit; font-size: 16px; display: inline-flex; align-items: center; gap: 10px; margin: 0 auto;">
+            <i class="fas fa-thumbs-up"></i> 
+    حسناً
+        </button>
+    </div>
+</div>
+
+<script>
+function showIOSPopup(event) {
+    event.preventDefault();
+    document.getElementById('iosPopup').style.display = 'flex';
+}
+
+function closeIOSPopup() {
+    document.getElementById('iosPopup').style.display = 'none';
+}
+
+// إغلاق الـ popup عند الضغط خارج المحتوى
+document.getElementById('iosPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeIOSPopup();
+    }
+});
+</script>
+
+</body>
+</html>

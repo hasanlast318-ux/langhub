@@ -1,0 +1,19 @@
+edulingua-website/
+├── index.html
+├── css/
+│   ├── style.css
+│   └── responsive.css
+├── js/
+│   ├── main.js
+│   └── animations.js
+├── images/
+│   ├── logo.png
+│   ├── hero-image.png
+│   ├── app-screenshot.png
+│   └── favicon.ico
+├── pages/
+│   ├── blog.html
+│   └── contact.html
+└── assets/
+    ├── fonts/
+    └── icons/

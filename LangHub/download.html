@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل Langhub | منصة اللغة</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #f59e0b;
+            --primary-dark: #e67e22;
+            --primary-light: rgba(245, 158, 11, 0.15);
+            --primary-glow: rgba(245, 158, 11, 0.3);
+            --bg-dark: #0f172a;
+            --bg-card-dark: #1e293b;
+            --text-light: #f1f5f9;
+            --text-gray-dark: #94a3b8;
+            --border-dark: rgba(245, 158, 11, 0.25);
+            --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes scaleUp {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #0a0f1c 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .download-card {
+            background: var(--bg-card-dark);
+            border-radius: 32px;
+            padding: 50px 40px;
+            text-align: center;
+            border: 1px solid var(--border-dark);
+            animation: fadeInUp 0.6s ease-out;
+            box-shadow: var(--shadow-dark);
+        }
+
+        .logo {
+            width: 90px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+
+        .download-card h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .download-card p {
+            color: var(--text-gray-dark);
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px 28px;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            width: auto;
+            min-width: 260px;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            animation: scaleUp 0.6s ease-out;
+            cursor: pointer;
+            border: none;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .download-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .download-btn i {
+            font-size: 32px;
+        }
+
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .btn-text span {
+            font-size: 11px;
+            font-weight: 400;
+            opacity: 0.85;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-text strong {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .google-play {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .google-play i {
+            color: #f9ab00;
+        }
+
+        .app-store {
+            background: #000000;
+            color: white;
+        }
+
+        .app-store i {
+            color: white;
+        }
+
+        .direct {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #0f172a;
+        }
+
+        .direct i {
+            color: #0f172a;
+        }
+
+        .note {
+            font-size: 13px;
+            color: var(--text-gray-dark);
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .note i {
+            color: var(--primary);
+            margin: 0 4px;
+        }
+
+        /* تنسيق الـ Popup */
+        #iosPopup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .popup-content {
+            background: var(--bg-card-dark);
+            max-width: 380px;
+            width: 90%;
+            border-radius: 28px;
+            padding: 35px 25px;
+            text-align: center;
+            direction: rtl;
+            position: relative;
+            animation: fadeInUp 0.3s ease;
+            border: 1px solid var(--border-dark);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .apple-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .apple-icon i {
+            font-size: 48px;
+            color: white;
+        }
+
+        .popup-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .popup-content p {
+            color: var(--text-gray-dark);
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .popup-content .highlight-text {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .popup-btn {
+            background: var(--primary);
+            color: #0f172a;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
+        }
+
+        .popup-btn:hover {
+            transform: scale(1.02);
+            background: var(--primary-dark);
+        }
+
+        @media (max-width: 550px) {
+            .download-card {
+                padding: 35px 25px;
+            }
+            
+            .download-card h1 {
+                font-size: 24px;
+            }
+            
+            .download-btn {
+                min-width: 220px;
+                padding: 8px 20px;
+            }
+            
+            .download-btn i {
+                font-size: 28px;
+            }
+            
+            .btn-text strong {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="download-card">
+            <img src="images/logo.png" alt="Langhub" class="logo">
+            <h1>تحميل تطبيق <span style="color: var(--primary);">Langhub</span></h1>
+            <p>اختر نظام التشغيل الخاص بك للبدء</p>
+            
+            <div class="download-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.langhub.app" target="_blank" class="download-btn google-play">
+                    <i class="fab fa-google-play"></i>
+                    <div class="btn-text">
+                        <span>GET IT ON</span>
+                        <strong>Google Play</strong>
+                    </div>
+                </a>
+                
+                <a href="#" class="download-btn app-store" onclick="showIOSPopup(event);">
+                    <i class="fab fa-apple"></i>
+                    <div class="btn-text">
+                        <span>Download on the</span>
+                        <strong>App Store</strong>
+                    </div>
+                </a>
+                
+                <a href="files/langhub.apk" download class="download-btn direct">
+                    <i class="fas fa-download"></i>
+                    <div class="btn-text">
+                        <span>تحميل مباشر</span>
+                        <strong>APK File</strong>
+                    </div>
+                </a>
+            </div>
+            
+            <p class="note">
+                <i class="fas fa-qrcode"></i> امسح الباركود لفتح هذه الصفحة على هاتفك <i class="fas fa-mobile-alt"></i>
+            </p>
+        </div>
+    </div>
+
+    <!-- Popup مخصص لرسالة iOS -->
+    <div id="iosPopup">
+        <div class="popup-content">
+            <div class="apple-icon">
+                <i class="fab fa-apple"></i>
+            </div>
+            <h3>قريباً على App Store</h3>
+            <p>نحن نعمل بجد لتوفير نسخة لأجهزة iOS</p>
+            <p class="highlight-text">
+                <i class="fas fa-code-branch"></i> قيد التطوير حالياً <i class="fas fa-microchip"></i>
+            </p>
+            <button class="popup-btn" onclick="closeIOSPopup()">
+                <i class="fas fa-check-circle"></i> حسناً
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showIOSPopup(event) {
+            event.preventDefault();
+            document.getElementById('iosPopup').style.display = 'flex';
+        }
+
+        function closeIOSPopup() {
+            document.getElementById('iosPopup').style.display = 'none';
+        }
+
+        // إغلاق الـ popup عند الضغط خارج المحتوى
+        document.getElementById('iosPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeIOSPopup();
+            }
+        });
+    </script>
+</body>
+</html>
